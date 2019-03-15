@@ -1,0 +1,13 @@
+
+Student: Rafael Santos
+Homework 3
+
+
+ 
+ Financial Analysis - PyBank 
+ ---------------------------------------
+ Total Months: 86
+ Total: $38,382,578.00
+ Average Change: $-2,315.12
+ Greatest Decrease in Profits: $-2,196,167 (Sep-2013)
+ Greatest Increase in Profits: $1,926,159 (Feb-2012)
