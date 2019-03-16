@@ -1,3 +1,10 @@
+#STUDENT: RAFAEL SANTOS         #HOME WORK 3
+#Data Analystics and Visualization Cohort 3
+
+#PYBANK-VERSION 1
+#### THIS VERSION IS THE SAME USED WITHIN 2in1-v1 and 2in1-v2 SCRIPTS.
+
+
 ###############################################################
 # PROMPT MESSAGE SO THAT USER KNOWS THE CODE IS RUNNING....
 ###############################################################
@@ -81,7 +88,7 @@ print (multilines)
 
 # Export Summary to a file on disk, creating if not existent.
 #--------------------------------------------------------------
-outputfile = open('outputPyBank-RafaelSantos.txt', 'w+' )
+outputfile = open('PYBANK-VERSION1-Output-RafaelSantos.txt', 'w+' )
 
 ## Prompt user that file is being created
 print ("\n ***** Exporting to text file *****\n")

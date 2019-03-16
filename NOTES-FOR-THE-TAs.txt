@@ -1,0 +1,25 @@
+------------------------------------------------------------
+Student: Rafael Santos  - Homework 3
+------------------------------------------------------------
+Notes for the TAs:
+1) I tried to mainly use key concepts learned around dictionaries and lists.
+2) Hints and Considerations mentioned the code should be able to run different datasets. I validated this by making manual changes to a sample of the datasets validating it worked.
+3) This going back and forth inspired me to run both codes from one single script. I combined the two codes (PyPoll and PyBank) in the same script called 2in1.py. This should allow you to review the homework from a single file.
+4) Comments about 2in1.py
+	*********************************************
+	4.2) Version 2 is the final version. It is located at: \python-challenge
+		4.2.1) Version 1 is essencially the same, without a function to clear the screen output before printing new data on screen. This is just in case version 2 does not run on a Mac computer - I have/could only test on Windows.
+	*********************************************
+	4.3) The files written by the code go to the directories as indicated in the homework instructions (PyPoll and PyBank folders)
+		4.3.1) 2in1-v2 files
+			PyPoll:		.2in1-Version2-Output-PyPoll-RafaelSantos
+			PyBank:		.2in1-version2-Output-PyBank-RafaelSantos
+
+5) The individual scripts (not combined) are also available in the respective PyPoll and PyBank folders.
+	5.1) PyPoll (individual/not combined)
+		5.2.1) code:	main.py
+		5.2.2) output:	PYPOLL-VERSION1-Output-PyPoll-RafaelSantos
+
+	5.2) PyBank (individual/not combined)
+		5.2.1) code:	main.py
+		5.2.2) output:	PYBANK-VERSION1-Output-RafaelSantos

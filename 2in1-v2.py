@@ -1,14 +1,39 @@
-print("\n '2in1' code is running\n\n")
+#STUDENT: RAFAEL SANTOS         #HOME WORK 3
+#Data Analystics and Visualization Cohort 3
+
+#2in1-VERSION 2
+#### IMPROVEMENT: AS YOU SELECT OPTIONS IN THE INTERACTIVE MENU, PREVIOUS PRINT CLEARS FROM THE SCREEN
+#### NOTE: THIS VERSION COULD NOT BE TESTED ON A MAC COMPUTER. RUNS WELL ON WINDOWS.
+#### THIS VERSION CONTAINS PYPOLL-V1 AND PYBANK-VERSION2 SCRIPTS + WITH AN INTERACTIVE MENU. 
+
+#*********************************************************************************************   
+
+print("\n '2in1-version 2' code is running...\n\n")
 
 # IMPORT MODULES
 #--------------------------------------------------------------
 import os
 import csv
 from collections import Counter
+from subprocess import call 
+from time import sleep 
+
+###############################################################
+#BEGIN: CLEAR  SCREEN (USER DEFINED) - AUXILIARY SUBROUTINE FOR UX
+###############################################################
+
+def clear():  
+    _ = call('clear' if os.name =='posix' else 'clear')
+    # sleep for 1 second after printing output 
+    sleep(1) 
+
+
+#*********************************************************************************************   
 
 ###############################################################
 #BEGIN: PYPOLL FUNCTION (USER DEFINED) - MAIN SUB ROUTINE
 ###############################################################
+
 
 def PyPoll(py):
     
@@ -57,9 +82,8 @@ def PyPoll(py):
 
     # Print the results
     #--------------------------------------------------------------
-
     ## The total number of votes cast
-    multiplelines = ("Election Results" + "\t(Total Votes: " + \
+    multiplelines = ("\n\nElection Results" + "\t(Total Votes: " + \
                     "{:,.0f}".format(TotalVotes) + ")"\
                     "\n-----------------------------------------------\n" +\
                     "\nCandidate\t(Votes Received)\t| %"
@@ -81,11 +105,12 @@ def PyPoll(py):
                         "Winner:\t" + winnername + \
                         "\n-----------------------------------------------\n")
 
+    clear() # first clear screen then
     print (multiplelines)  
 
     # Write the results to a file in disk, creating if not existent.
     #--------------------------------------------------------------
-    outputfile = open('..\Python-challenge\PyPoll\.2in1outputPyPoll-RafaelSantos.txt', 'w+' )
+    outputfile = open('..\Python-challenge\PyPoll\.2in1-Version2-Output-PyPoll-RafaelSantos.txt', 'w+' )
 
     ## Prompt user that file is being created
     print ("\n ***** Exporting to text file *****\n")
@@ -112,7 +137,6 @@ def PyBank(py):
     # Set path for file
     #--------------------------------------------------------------
     csvfile = os.path.join("..", "Python-challenge\PyBank\Resources", "budget_data.csv")
-
     # lists to store data
     #--------------------------------------------------------------
     DateList = []                   #list to hold the split of data with DateList
@@ -177,12 +201,13 @@ def PyBank(py):
     greatest =  (gdpnumber + " (" + AvgGDecreaseDate + ")" + "\n" + gipnumber + " (" + AvgGIncreaseDate + ")")
 
     multilines = (summarytop +"\n"+ summarytotals +"\n"+ averagechange +"\n"+  greatest)
+    
+    clear() # first clear screen then
     print (multilines)
 
     # Export Summary to a file on disk, creating if not existent.
     #--------------------------------------------------------------
-    outputfile = open('..\Python-challenge\PyBank\.2in1outputPyBank-RafaelSantos.txt', 'w+' )
-
+    outputfile = open('..\Python-challenge\PyBank\.2in1-version2-Output-PyBank-RafaelSantos.txt', 'w+' )
     ## Prompt user that file is being created
     print ("\n ***** Exporting to text file *****\n")
 
@@ -214,6 +239,7 @@ while (endcode == False and aacc != 3):
                 "(3)\t None of the above (exit code).\n\n" +\
                 "Your choice is option number: ")
 
+    clear() # first clear screen then
     option = input(menuoptions)
     aacc = int(option)
 
@@ -239,6 +265,7 @@ while (endcode == False and aacc != 3):
                 abc = 3
                 aacc = 0
             else:               # this prompts the user to type a valid option
+                clear() # first clear screen then
                 print ("\n\t\t***TYPO CAUSED ERROR!***\n Please follow the instruction below.")
                 option = input(menuoptions)
                 abc = int(option)
@@ -264,6 +291,7 @@ while (endcode == False and aacc != 3):
             abc = 0
             endcode = True
         else:                   # this prompts the user to type a valid option
+            clear() # first clear screen then
             print ("\n\t\t***TYPO CAUSED ERROR!***\n Please follow the instruction below.\n")
             optionexit = input("\n\n\n\t Go back to MAIN MENU?\n" + \
                                "\tType:\n" + \
